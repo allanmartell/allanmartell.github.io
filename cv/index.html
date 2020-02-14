@@ -1,0 +1,56 @@
+---
+layout: default
+title: Curriculum Vitae
+---
+	<h1>{{ page.title }}</h1>
+
+	<ul class="martell_data">
+	  {% for item in site.cv_data.martell_data %}
+	    <li><span>{{ item.key }}</span></li>
+	    <li><span>{{ item.value }}</span></li>
+	  {% endfor %}
+	</ul>
+
+	<ul class="education">
+	  {% for item in site.cv_data.education %}
+	    <li><h3>{{ item.period }}</h3></li>
+	    <li><span>{{ item.description }}</span></li>
+	  {% endfor %}
+	</ul>
+
+	<ul class="research_focus">
+	  {% for item in site.cv_data.research_focus %}
+	    <li><h3>{{ item.key }}</h3></li>
+	    <li><span>{{ item.value }}</span></li>
+	  {% endfor %}
+	</ul>
+
+	<ul class="research">
+
+		{% for type in site.cv_data.research_focus %}
+		<li><h2>{{ item.type }}</h2></li>
+
+		<ul class="type">
+	  		{% for item in type %}
+			  	<li><h3>{{ item.period }}</h3></li>
+			    <li><span>{{ item.description }}</span></li>
+	  		{% endfor %}
+	  	</ul>
+
+	  	{% endfor %}
+	</ul>
+
+	<ul class="work_experience">
+
+		{% for type in site.cv_data.work_experience %}
+		<li><h2>{{ item.type }}</h2></li>
+
+		<ul class="type">
+	  		{% for item in type %}
+			  	<li><span><h3>{{ item.period }} </h3></span></li>
+			    <li><span>{{ item.description }}</span></li>
+	  		{% endfor %}
+	  	</ul>
+
+	  	{% endfor %}
+	</ul>
