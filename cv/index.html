@@ -4,9 +4,9 @@ title: Curriculum Vitae
 ---
 	<h1>{{ page.title }}</h1>
 
-	<p> Test 1 </p>
+	<p><h href="CVAllanMartell.pdf"> Test 1 </p>
 
-	<ul class="martell_data">
+	<ul class="martelldata">
 	  {% for item in site.cv.data.martelldata %}
 	    <li><span>{{ item.key }}</span></li>
 	    <li><span>{{ item.value }}</span></li>
@@ -14,7 +14,7 @@ title: Curriculum Vitae
 	</ul>
 
 	<ul class="education">
-	  {% for item in site.cv_data.education %}
+	  {% for item in site.cv.data.education %}
 	    <li><h3>{{ item.period }}</h3></li>
 	    <li><span>{{ item.description }}</span></li>
 	  {% endfor %}
@@ -44,7 +44,7 @@ title: Curriculum Vitae
 
 	<ul class="work_experience">
 
-		{% for type in site.cv_data.work_experience %}
+		{% for type in site.cv.data.workexperience %}
 		<li><h2>{{ item.type }}</h2></li>
 
 		<ul class="type">
