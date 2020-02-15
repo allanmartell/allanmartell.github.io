@@ -20,8 +20,8 @@ title: Curriculum Vitae
 	  {% endfor %}
 	</ul>
 
-	<ul class="research_focus">
-	  {% for item in site.cv_data.research_focus %}
+	<ul class="researchfocus">
+	  {% for item in site.cv.data.researchfocus %}
 	    <li><h3>{{ item.key }}</h3></li>
 	    <li><span>{{ item.value }}</span></li>
 	  {% endfor %}
@@ -29,7 +29,7 @@ title: Curriculum Vitae
 
 	<ul class="research">
 
-		{% for type in site.cv_data.research_focus %}
+		{% for type in site.cv.data.research %}
 		<li><h2>{{ item.type }}</h2></li>
 
 		<ul class="type">
