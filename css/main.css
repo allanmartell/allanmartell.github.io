@@ -42,7 +42,6 @@ ul.posts li {
     list-style: none;
 }
 
-ul.researchthemes, il.theme {
-list-style-type: circle;
-    font-size: 2.0em;
+ul.researchthemes {
+    font-size: x-large;
 }
