@@ -4,9 +4,9 @@ title: "CGI during my spare time"
 date: 2020-04-01
 ---
 
-I've been doing trying the tutorials from *[The Nature of Code]* (https://natureofcode.com/book/) by [Daniel Shiffman] (https://shiffman.net/).
+I've been doing trying the tutorials from *[The Nature of Code](https://natureofcode.com/book/)* by [Daniel Shiffman](https://shiffman.net/).
 
-I fell in love with Computer-Generated Graphics (CGI) during my masters in Digital Media at Georgia Tech. In fact, I first learned to program in [Processing] (https://processing.org/). However, outside of the programming courses I teach at Michigan, I've not had much time to actually dive into CGI after I finished my masters. It's been eight years and I wanted to hone my skills. So, I took advantage of my social distancing time productively.
+I fell in love with Computer-Generated Graphics (CGI) during my masters in Digital Media at Georgia Tech. In fact, I first learned to program in [Processing](https://processing.org/). However, outside of the programming courses I teach at Michigan, I've not had much time to actually dive into CGI after I finished my masters. It's been eight years and I wanted to hone my skills. So, I took advantage of my social distancing time productively.
 
 I first started to adapt scripts from the processing tutorials into `pygame` on my own. However, I quickly realized this was not getting me far. For once, I was just translating code from `Java` (processing is after all `Java`). I felt like I was translating a math paper from English to Spanish. Sure, I could make every sentence syntactically and grammatically correct, but this was not helping me grasp the argument, or in this case, the logic underpinning the commands. Thus, I decided to go back to the origins. I learned that Shiffman had an online version of his book and grabbed onto it.
 
