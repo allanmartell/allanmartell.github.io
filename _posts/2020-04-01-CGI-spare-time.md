@@ -15,3 +15,7 @@ It probably would be much faster if I just followed the instructions with Proces
 In the mid-term, my hope is to use my learning to extend available options for information visualization through other python libraries like `numpy`. If I get away with this, I can actually link my current experiments with my plans to combine data-driven storytelling and my dissertation research on social memory. The way is long, but I'm not in a rush. After all, the priority right now is my dissertation. The good thing about CGI is that I find it so absorbing that it completely takes my mind out of my research-related concerns at the end of the day. So, I deepen my skills as a programmer, learn new ways to generate graphics, decompress, and make cool graphics. Thanks, Daniel Shiffman!
 
 If you want to check out the scripts I'm producing, stop by my [repo](https://github.com/allanmartell/Nature-of-Code-with-Pygame) here. I would love feedback to make better scripts.
+
+Here is the very first script of this experiment, the classic *[bouncing ball](https://github.com/allanmartell/Nature-of-Code-with-Pygame/raw/documentation/01%20-%20Vectors/1.1_bouncing_ball_with_vectors.py)*:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bqudDkDHw6E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
