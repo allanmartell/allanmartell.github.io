@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Social Memory in Times of COVID"
+title: "What COVID-19 can tell us about memory"
 date: 2020-04-17
 ---
 
