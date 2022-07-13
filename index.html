@@ -144,13 +144,7 @@ title: Allan Martell, Ph.D.
             <section class="resume-section" id="Blog">
               <div class="resume-section-content">
                 <h2 class="mb-5">Blog</h2>
-                    <li><span>17 Apr 2020</span> » <a href="https://allanmartell.github.io/blog/2020/04/17/what-COVID-19-can-tell-us-about-memory" title="What COVID-19 can tell us about memory">What COVID-19 can tell us about memory</a></li>
-                    <li><span>03 Apr 2020</span> » <a href="https://allanmartell.github.io/blog/2020/04/03/cultural-trauma-and-design">Cultural Trauma and Design</a></li>
-                    <li><span>01 Apr 2020</span> » <a href="https://allanmartell.github.io/blog/2020/04/01/CGI-spare-time">CGI during my spare time</a></li>
-                    <li><span>14 Feb 2020</span> » <a href="https://allanmartell.github.io/blog/2020/02/14/welcome" title="I learned to use Jekyll">I learned to use Jekyll</a></li>
-                    <li><span>23 Jan 2020</span> » <a href="https://allanmartell.github.io/blog/2020/01/23/on-cultural-trauma-and-design" title="On Cultural Trauma">On Cultural Trauma</a></li>
-                    <li><span>20 Jan 2020</span> » <a href="https://allanmartell.github.io/blog/2020/01/20/accepted-to-msa" title="Accepted to the Annual Meeting of the Memory Studies Association!">Accepted to the Annual Meeting of the Memory Studies Association!</a></li>
-
+                    
                     {% for post in site.posts %}
                 	    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
                 	  {% endfor %}
