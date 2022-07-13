@@ -1,7 +1,15 @@
 ---
 layout: default
+title: Allan Martell's Blog
 ---
-<h1>{{ page.title }}</h1>
+
+{% if page.title%}
+	<h1>{{page.title}}</h1>
+{% else %}
+	<h1>Untitled post</h1>
+{% endif %}
+{{ page.date | date: "%b %d, %Y" }}
+
 <div class="flex-shrink-0"><span class="text-primary">{{ page.date | date_to_string }}</span></div>
 
 <div class="lead mb-5">
