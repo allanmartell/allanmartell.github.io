@@ -144,7 +144,7 @@ title: Allan Martell, Ph.D.
             <section class="resume-section" id="Blog">
               <div class="resume-section-content">
                 <h2 class="mb-5">Blog</h2>
-                    
+
                     {% for post in site.posts %}
                 	    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
                 	  {% endfor %}
