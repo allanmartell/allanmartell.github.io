@@ -15,3 +15,13 @@ permalink: /:year/:month/:day/:title
 <div class="lead mb-5">
   {{ content }}
 </div>
+
+<div class="lead mb-5">
+
+	<h2>See other posts:</h2>
+
+	{% for post in site.posts %}
+		<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+	{% endfor %}
+
+</div>
