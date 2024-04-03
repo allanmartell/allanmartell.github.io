@@ -4,33 +4,37 @@ title: Allan Martell's Blog
 permalink: /:year/:month/:day/:title
 ---
 
-{% if page.title%}
-	<h1 class="mb-0">{{page.title}}</h1>
-{% else %}
-	<h1 class="mb-0">Untitled post</h1>
-{% endif %}
+	<section class="resume-section" id="Blog">
 
-<div class="flex-shrink-0"><span class="text-primary">{{ page.date | date_to_string }}</span></div>
+		{% if page.title%}
+			<h1 class="mb-0">{{page.title}}</h1>
+		{% else %}
+			<h1 class="mb-0">Untitled post</h1>
+		{% endif %}
 
-<p class="lead mb-5">
-  {{ content }}
-</p>
+		<div class="flex-shrink-0"><span class="text-primary">{{ page.date | date_to_string }}</span></div>
 
-<p class="lead mb-5">
+		<p class="lead mb-5">
+		{{ content }}
+		</p>
 
-	<h2>See other posts:</h2>
+		<p class="lead mb-5">
 
-	{% for post in site.posts %}
-		<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-	{% endfor %}
+			<h2>See other posts:</h2>
 
-</p>
+			{% for post in site.posts %}
+				<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+			{% endfor %}
 
-<div class="social-icons">
-	<a class="social-icon" href="https://www.linkedin.com/in/allanmartell/"><i class="fab fa-linkedin-in"></i></a>
-	<a class="social-icon" href="https://github.com/allanmartell"><i class="fab fa-github"></i></a>
-	<a class="social-icon" href="https://twitter.com/allanmartell"><i class="fab fa-twitter"></i></a>
-	<a class="social-icon" href="#!"><i class="fab fa-facebook-f"></i></a>
-</div>
+		</p>
+
+		<div class="social-icons">
+			<a class="social-icon" href="https://www.linkedin.com/in/allanmartell/"><i class="fab fa-linkedin-in"></i></a>
+			<a class="social-icon" href="https://github.com/allanmartell"><i class="fab fa-github"></i></a>
+			<a class="social-icon" href="https://twitter.com/allanmartell"><i class="fab fa-twitter"></i></a>
+			<a class="social-icon" href="#!"><i class="fab fa-facebook-f"></i></a>
+		</div>
+
+	</section>
 
 <hr class="m-0" />
