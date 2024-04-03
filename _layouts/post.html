@@ -12,11 +12,11 @@ permalink: /:year/:month/:day/:title
 
 <div class="flex-shrink-0"><span class="text-primary">{{ page.date | date_to_string }}</span></div>
 
-<div class="lead mb-5">
+<p class="lead mb-5">
   {{ content }}
-</div>
+</p>
 
-<div class="lead mb-5">
+<p class="lead mb-5">
 
 	<h2>See other posts:</h2>
 
@@ -24,7 +24,7 @@ permalink: /:year/:month/:day/:title
 		<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
 	{% endfor %}
 
-</div>
+</p>
 
 
 <hr class="m-0" />
