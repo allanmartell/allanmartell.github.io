@@ -5,36 +5,38 @@ permalink: /:year/:month/:day/:title
 ---
 
 	<section class="resume-section" id="Blog">
+		<div class="resume-section-content">
 
-		{% if page.title%}
-			<h1 class="mb-0">{{page.title}}</h1>
-		{% else %}
-			<h1 class="mb-0">Untitled post</h1>
-		{% endif %}
+			{% if page.title%}
+				<h1 class="mb-0">{{page.title}}</h1>
+			{% else %}
+				<h1 class="mb-0">Untitled post</h1>
+			{% endif %}
 
-		<div class="flex-shrink-0"><span class="text-primary">{{ page.date | date_to_string }}</span></div>
+			<div class="flex-shrink-0"><span class="text-primary">{{ page.date | date_to_string }}</span></div>
 
-		<p class="lead mb-5">
-		{{ content }}
-		</p>
+			<p class="lead mb-5">
+			{{ content }}
+			</p>
 
-		<p class="lead mb-5">
+			<p class="lead mb-5">
 
-			<h2>See other posts:</h2>
+				<h2>See other posts:</h2>
 
-			{% for post in site.posts %}
-				<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-			{% endfor %}
+				{% for post in site.posts %}
+					<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+				{% endfor %}
 
-		</p>
+			</p>
 
-		<div class="social-icons">
-			<a class="social-icon" href="https://www.linkedin.com/in/allanmartell/"><i class="fab fa-linkedin-in"></i></a>
-			<a class="social-icon" href="https://github.com/allanmartell"><i class="fab fa-github"></i></a>
-			<a class="social-icon" href="https://twitter.com/allanmartell"><i class="fab fa-twitter"></i></a>
-			<a class="social-icon" href="#!"><i class="fab fa-facebook-f"></i></a>
+			<div class="social-icons">
+				<a class="social-icon" href="https://www.linkedin.com/in/allanmartell/"><i class="fab fa-linkedin-in"></i></a>
+				<a class="social-icon" href="https://github.com/allanmartell"><i class="fab fa-github"></i></a>
+				<a class="social-icon" href="https://twitter.com/allanmartell"><i class="fab fa-twitter"></i></a>
+				<a class="social-icon" href="#!"><i class="fab fa-facebook-f"></i></a>
+			</div>
+
 		</div>
-
 	</section>
 
 <hr class="m-0" />
