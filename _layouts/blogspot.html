@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Posts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .post {
+            max-width: 600px;
+            margin: auto;
+        }
+        .post-header {
+            margin-bottom: 20px;
+        }
+        .post-title {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        .post-meta {
+            font-size: 14px;
+            color: #666;
+        }
+        .post-content {
+            margin-top: 20px;
+        }
+        .post-img {
+            width: 100%;
+            height: auto;
+        }
+        .table-of-contents {
+    position: fixed;
+    left: 20px; /* Adjust based on your layout */
+    top: 100px; /* Adjust based on your layout */
+    width: 200px; /* Adjust based on your layout */
+    background-color: #f0f0f0; /* Light grey background */
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    z-index: 1000; /* Ensure it sits above other content */
+}
+
+.table-of-contents h3 {
+    margin-top: 0;
+}
+
+.table-of-contents ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.table-of-contents li {
+    margin-bottom: 10px;
+}
+
+.table-of-contents a {
+    color: #333;
+    text-decoration: none;
+}
+
+.table-of-contents a:hover {
+    text-decoration: underline;
+}
+        .lightbox {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.table-of-contents {
+    position: fixed;
+    left: 20px; /* Adjust based on your layout */
+    top: 100px; /* Adjust based on your layout */
+    width: 200px; /* Adjust based on your layout */
+    background-color: #f0f0f0; /* Light grey background */
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    z-index: 1000; /* Ensure it sits above other content */
+}
+
+.table-of-contents h3 {
+    margin-top: 0;
+}
+
+.table-of-contents ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.table-of-contents li {
+    margin-bottom: 10px;
+}
+
+.table-of-contents a {
+    color: #333;
+    text-decoration: none;
+}
+
+.table-of-contents a:hover {
+    text-decoration: underline;
+}
+@media screen and (max-width: 800px) {
+    .table-of-contents {
+        position: static; /* Make TOC flow with the document */
+        width: 100%; /* Full width */
+        margin-bottom: 20px; /* Add some space below the TOC */
+        max-height: none; /* Remove max height */
+        overflow-y: visible; /* Remove scroll */
+        box-shadow: none; /* Remove shadow */
+        background-color: transparent; /* Make background transparent */
+        padding: 10px 0; /* Reduce padding */
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .table-of-contents {
+        display: none; /* Optionally hide TOC on very small screens */
+    }
+}
+.timeline-map {
+    position: fixed;
+    right: 20px; /* Adjust based on your layout */
+    top: 100px; /* Adjust based on your layout */
+    width: 200px; /* Adjust based on your layout */
+    background-color: #f9f9f9; /* Light grey background, adjust as needed */
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    z-index: 1000; /* Ensure it sits above other content */
+    max-height: 80vh; /* Adjust based on your layout */
+    overflow-y: auto; /* Allows scrolling if content exceeds max height */
+}
+
+.timeline-map h3 {
+    margin-top: 0;
+}
+
+.timeline-map ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.timeline-map li {
+    margin-bottom: 10px;
+}
+
+.timeline-map a {
+    color: #333;
+    text-decoration: none;
+}
+
+.timeline-map a:hover {
+    text-decoration: underline;
+}
+.lightbox-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+
+<div class="table-of-contents">
+    <ul id="toc">
+        <!-- Table of contents will be inserted here -->
+    </ul>
+</div>
+
+<div id="posts-container">
+    <!-- Blog posts will be inserted here -->
+</div>
+
+<div class="timeline-map" id="timeline">
+    <!-- Timeline entries will be inserted here -->
+</div>
+
+<script>
+    // Your posts data
+    const posts = [
+        {
+            "id": "post1",
+            "title": "Accepted to the 2024 Annual Meeting of the Memory Studies Association!",
+            "author": "Allan Martell",
+            "date": "19 Feb 2024",
+            "image": "MSA.jpeg",
+            "content": "Today, I received confirmation that my paper  <a href='article5.html' target='_blank' class='read-more-btn'>read more...</a>",
+            "youtubeLink": ""
+        },
+        {
+            "id": "post2",
+            "title": "What COVID-19 can tell us about memory",
+            "author": "Allan Martell",
+            "date": "17 Apr 2020",
+            "image": "covid.jpg",
+            "content": "I’ve been thinking about the impact of COVID-19 on current understandings of social memory <a href='article1.html' target='_blank' class='read-more-btn'>read more...</a>",
+            "youtubeLink": ""
+        },
+        {
+        "id": "post3",
+        "title": "Cultural Trauma and Design",
+        "author":"Allan Martell",
+        "date": "03 Apr 2020",
+        "image": "culturetrauma.jpg",
+        "content": "I’ve been exploring what frameworks are already in place to tackle cultural trauma as a design problem <a href='article2.html' target='_blank' class='read-more-btn'>read more...</a>",
+        "youtubeLink": ""
+    },
+    {
+        "id": "post4",
+        "title": "CGI during my spare time",
+        "author":"Allan Martell",
+        "date": "01 Apr 2020",
+        "image": "",
+        "youtubeLink": "https://www.youtube.com/embed/bqudDkDHw6E?si=Q8SACySvdRxcbvZu",
+        "content": "I’ve been doing trying the tutorials from The Nature of Code by Daniel Shiffman <a href='article3.html' target='_blank' class='read-more-btn'>read more...</a>",
+    },
+       {
+        "id": "post5",
+        "title": "I learned to use jekyll",
+        "author":"Allan Martell",
+        "date": "14 Feb 2020",
+        "image": "",
+        "youtubeLink": "",
+        "content": "I created my portfolio website <a href='article7.html' target='_blank' class='read-more-btn'>read more...</a>",
+    },
+    {
+        "id": "post6",
+        "title": "On Cultural Trauma",
+        "author":"Allan Martell",
+        "date": "23 Jan 2020",
+        "image": "culturalTrauma.jpg",
+        "youtubeLink": "",
+        "content": "I’m reading about cultural trauma for my dissertation. Lots of people have asserted that events of large-scale traumatic nature have a means of permeat <a href='article4.html' target='_blank' class='read-more-btn'>read more...</a>",
+    },
+      {
+            "id": "post7",
+            "title": "Accepted to the 2020 Annual Meeting of the Memory Studies Association!",
+            "author": "Allan Martell",
+            "date": "20 Jan 2020",
+            "image": "MSA.jpeg",
+            "content": "I recently received confirmation form the Memory Studies Association <a href='article6.html' target='_blank' class='read-more-btn'>read more...</a>",
+            "youtubeLink": ""
+        }
+
+        // ... more posts
+    ];
+
+    // Function to display posts
+    function displayPosts(posts) {
+        const postsContainer = document.getElementById('posts-container');
+        const tocContainer = document.getElementById('toc');
+        const timelineContainer = document.getElementById('timeline');
+
+        tocContainer.innerHTML = '<h3>Table of Contents</h3><ul>';
+        timelineContainer.innerHTML = '<h3>Timeline</h3><ul>';
+
+        posts.forEach(post => {
+            const postElement = document.createElement('div');
+            postElement.className = 'post';
+            postElement.id = post.id;
+            postElement.innerHTML = `
+                <div class="post-header">
+                    <h2 class="post-title">${post.title}</h2>
+                    <p class="post-date">${post.author} | ${post.date}</p>
+                </div>
+                ${post.image ? `<img src="${post.image}" alt="Post Image" class="post-img">` : ''}
+                <div class="post-content">${post.content}</div>
+                ${post.youtubeLink ? `<iframe width="560" height="315" src="${post.youtubeLink}" frameborder="0" allowfullscreen></iframe>` : ''}
+            `;
+
+            postsContainer.appendChild(postElement);
+
+            const tocEntry = document.createElement('li');
+            tocEntry.innerHTML = `<a href="#${post.id}">${post.title}</a>`;
+            tocContainer.querySelector('ul').appendChild(tocEntry);
+
+            const timelineEntry = document.createElement('li');
+            timelineEntry.innerHTML = `<a href="#${post.id}">${post.date}</a>`;
+            timelineContainer.querySelector('ul').appendChild(timelineEntry);
+        });
+
+        tocContainer.innerHTML += '</ul>';
+        timelineContainer.innerHTML += '</ul>';
+    }
+
+    // Call displayPosts with the posts array
+    displayPosts(posts);
+</script>
+
+</body>
+</html>
