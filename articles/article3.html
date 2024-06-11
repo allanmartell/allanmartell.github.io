@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Profile</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #BD5D38; /* Orange background */
+            color: #333;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            align-items: center;
+        }
+        .container {
+            background-color: #ffffff;
+            width: 90%;
+            max-width: 1200px; /* Adjust the max width as necessary */
+            margin: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+        }
+        .sidebar {
+            padding: 20px;
+            width: 250px; /* Adjust width as necessary */
+        }
+        .sidebar h1 {
+            color: #333;
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+        .sidebar p {
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .sidebar a {
+            text-decoration: none;
+            color: #004D40;
+            display: block;
+            margin: 5px 0;
+            font-size: 18px;
+        }
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+        .main-content {
+            flex: 1; /* Take up the remaining space */
+            padding: 40px;
+        }
+        .main-content h2 {
+            color: #333;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        .main-content p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #666;
+        }
+            .round-image {
+        width: 200px; /* adjust the size as needed */
+        height: 200px; /* must be the same as width to maintain the circle shape */
+        border-radius: 70%; /* this creates the round shape */
+        object-fit: cover; /* ensures the image covers the space without being squished */
+        }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                width: 100%;
+                margin: 0;
+            }
+            .sidebar {
+                width: 100%;
+                order: 2; /* Move sidebar below main content */
+            }
+            .main-content {
+                order: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <img src="https://allanmartell.github.io/assets/img/profile.jpg" alt="Profile Image" class="round-image">
+            <h1>Allan Martell</h1>
+            <p>Professor | ILS</p>
+            <a href="https://allanmartell.github.io/#Bio" target='_blank'>Bio</a>
+            <a href="https://allanmartell.github.io/#Experience" target='_blank'>Experience</a>
+            <a href="https://allanmartell.github.io/#Education" target='_blank'>Education</a>
+            <a href="https://allanmartell.github.io/#Research" target='_blank'>Research</a>
+            <a href="https://allanmartell.github.io/#Interests" target='_blank'>Interests</a>
+            <a href="https://allanmartell.github.io/#Blog" target='_blank'>Blog</a>
+        </div>
+        <div class="main-content">
+<h2 id="second-heading-">CGI during my spare time</h2>
+<h2 id="Date-2020-04-17">Date: 2020-04-01</h2>
+<p>I’ve been doing trying the tutorials from <em><a href="https://natureofcode.com/book/">The Nature of Code</a></em> by <a href="https://shiffman.net/">Daniel Shiffman</a>.</p>
+
+<p>I fell in love with Computer-Generated Graphics (CGI) during my masters in Digital Media at Georgia Tech. In fact, I first learned to program in <a href="https://processing.org/">Processing</a>. However, outside of the programming courses I teach at Michigan, I’ve not had much time to actually dive into CGI after I finished my masters. It’s been eight years and I wanted to hone my skills. So, I took advantage of my social distancing time productively.</p>
+
+<p>I first started to adapt scripts from the processing tutorials into <code class="language-plaintext highlighter-rouge">pygame</code> on my own. However, I quickly realized this was not getting me far. For once, I was just translating code from <code class="language-plaintext highlighter-rouge">Java</code> (processing is after all <code class="language-plaintext highlighter-rouge">Java</code>). I felt like I was translating a math paper from English to Spanish. Sure, I could make every sentence syntactically and grammatically correct, but this was not helping me grasp the argument, or in this case, the logic underpinning the commands. Thus, I decided to go back to the origins. I learned that Shiffman had an online version of his book and grabbed onto it.</p>
+
+<p>It probably would be much faster if I just followed the instructions with Processing, but that’s too easy. More importantly, Processing is explicitly designed to abstract away the heavy lifting of setting up the environment for CGI. <code class="language-plaintext highlighter-rouge">Pygame</code> does the same to an extent, but much lesser. If I want, for instance, to instantiate a Euclidean vector object in python, there is no built-in <code class="language-plaintext highlighter-rouge">PVector</code> class. I have to search for vector classes, and sometimes still extend them with additional functionality of my own. In so doing, I’m making sure I master the ins and outs of python syntax structure, and getting a healthy reminder about basic trigonometry and physics. These learning outcomes will help me in the future, if I want to write a CGI script in a different language.</p>
+
+<p>In the mid-term, my hope is to use my learning to extend available options for information visualization through other python libraries like <code class="language-plaintext highlighter-rouge">numpy</code>. If I get away with this, I can actually link my current experiments with my plans to combine data-driven storytelling and my dissertation research on social memory. The way is long, but I’m not in a rush. After all, the priority right now is my dissertation. The good thing about CGI is that I find it so absorbing that it completely takes my mind out of my research-related concerns at the end of the day. So, I deepen my skills as a programmer, learn new ways to generate graphics, decompress, and make cool graphics. Thanks, Daniel Shiffman!</p>
+
+<p>If you want to check out the scripts I’m producing, stop by my <a href="https://github.com/allanmartell/Nature-of-Code-with-Pygame">repo</a> here. I would love feedback to make better scripts.</p>
+
+<p>Here is the very first script of this experiment, the classic <em><a href="https://github.com/allanmartell/Nature-of-Code-with-Pygame/raw/documentation/01%20-%20Vectors/1.1_bouncing_ball_with_vectors.py">bouncing ball</a></em>:</p>
+    </div>
+</body>
+</html>

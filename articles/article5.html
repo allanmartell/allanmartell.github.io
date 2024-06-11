@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Profile</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #BD5D38; /* Orange background */
+            color: #333;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            align-items: center;
+        }
+        .container {
+            background-color: #ffffff;
+            width: 90%;
+            max-width: 1200px; /* Adjust the max width as necessary */
+            margin: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+        }
+        .sidebar {
+            padding: 20px;
+            width: 250px; /* Adjust width as necessary */
+        }
+        .sidebar h1 {
+            color: #333;
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+        .sidebar p {
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .sidebar a {
+            text-decoration: none;
+            color: #004D40;
+            display: block;
+            margin: 5px 0;
+            font-size: 18px;
+        }
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+        .main-content {
+            flex: 1; /* Take up the remaining space */
+            padding: 40px;
+        }
+        .main-content h2 {
+            color: #333;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        .main-content p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #666;
+        }
+            .round-image {
+        width: 200px; /* adjust the size as needed */
+        height: 200px; /* must be the same as width to maintain the circle shape */
+        border-radius: 70%; /* this creates the round shape */
+        object-fit: cover; /* ensures the image covers the space without being squished */
+        }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                width: 100%;
+                margin: 0;
+            }
+            .sidebar {
+                width: 100%;
+                order: 2; /* Move sidebar below main content */
+            }
+            .main-content {
+                order: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <img src="https://allanmartell.github.io/assets/img/profile.jpg" alt="Profile Image" class="round-image">
+            <h1>Allan Martell</h1>
+            <p>Professor | ILS</p>
+            <a href="https://allanmartell.github.io/#Bio" target='_blank'>Bio</a>
+            <a href="https://allanmartell.github.io/#Experience" target='_blank'>Experience</a>
+            <a href="https://allanmartell.github.io/#Education" target='_blank'>Education</a>
+            <a href="https://allanmartell.github.io/#Research" target='_blank'>Research</a>
+            <a href="https://allanmartell.github.io/#Interests" target='_blank'>Interests</a>
+            <a href="https://allanmartell.github.io/#Blog" target='_blank'>Blog</a>
+        </div>
+        <div class="main-content">
+<h2 id="second-heading-">Accepted to the 2024 Annual Meeting of the Memory Studies Association!</h2>
+<h2 id="Date-2020-04-17">Date: 2024-02-19</h2>
+                    <p>Today, I received confirmation that my paper “Social Memory Infrastructures: Pushing the Boundaries of Resources, Policies, and Institutions to Support Memory Activism” has been accepted to the 2024 annual meeting of the Memory Studies Association, titled “Memories in Transit.”</p>
+
+<p>The conference will be held at the Pontificia Universidad Católica del Perú to be held in Lima from 18-20 July 2024.</p>
+
+<p>The paper I’ll be presenting is based on data that I collected during my dissertation fieldwork back in 2018, though I have not had the opportunity to share it publicly yet.</p>
+
+            </p>
+
+    </div>
+</body>
+</html>
