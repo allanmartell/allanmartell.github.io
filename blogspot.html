@@ -13,10 +13,6 @@
             background-color: orange; 
         }
         @media screen and (max-width: 800px) { 
-        .posts-wrapper {
-          background-color: orange; /* Set the background color around the posts */
-          padding: 20px 0; /* Padding top and bottom only, to limit the orange color's vertical spread */
-          } 
         .post {
             max-width: 600px;
             margin: auto;
@@ -295,7 +291,6 @@
             postElement.className = 'post';
             postElement.id = post.id;
             postElement.innerHTML = `
-                <div class="posts-wrapper">
                 <div class="post-header">
                     <h2 class="post-title">${post.title}</h2>
                     <p class="post-date">${post.author} | ${post.date}</p>
@@ -303,7 +298,6 @@
                 ${post.image ? `<img src="${post.image}" alt="Post Image" class="post-img">` : ''}
                 <div class="post-content">${post.content}</div>
                 ${post.youtubeLink ? `<iframe width="560" height="315" src="${post.youtubeLink}" frameborder="0" allowfullscreen></iframe>` : ''}
-                </div>
             `;
 
             postsContainer.appendChild(postElement);
